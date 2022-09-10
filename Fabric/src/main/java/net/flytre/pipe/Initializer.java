@@ -20,7 +20,7 @@ public class Initializer implements ModInitializer {
     @Override
     public void onInitialize() {
         Registry.init();
-        FluidPipeBlock.setFluidPipeLogic(FabricFluidPipeLogic.INSTANCE);
-        FluidPipeEntity.setFluidPipeLogic(FabricFluidPipeLogic.INSTANCE);
+        // FluidPipeBlock.setFluidPipeLogic(FabricFluidPipeLogic.INSTANCE);
+        // FluidPipeEntity.setFluidPipeLogic(FabricFluidPipeLogic.INSTANCE);
     }
 }

@@ -61,8 +61,8 @@ public class Registry {
         ItemRegistry.init();
         ITEM_PIPE_SCREEN_HANDLER = LoaderAgnosticRegistry.registerExtendedScreen(ItemPipeHandler::new, "pipe", "item_pipe");
 
-        FLUID_PIPE_BLOCK_ENTITY = LoaderAgnosticRegistry.registerBlockEntityType(() -> BlockEntityFactory.createBuilder(FluidPipeEntity::new, FLUID_PIPE.get()).build(null), "pipe", "fluid_pipe");
-        FLUID_PIPE_SCREEN_HANDLER = LoaderAgnosticRegistry.registerExtendedScreen(FluidPipeHandler::new, "pipe", "fluid_pipe");
+        // FLUID_PIPE_BLOCK_ENTITY = LoaderAgnosticRegistry.registerBlockEntityType(() -> BlockEntityFactory.createBuilder(FluidPipeEntity::new, FLUID_PIPE.get()).build(null), "pipe", "fluid_pipe");
+        // FLUID_PIPE_SCREEN_HANDLER = LoaderAgnosticRegistry.registerExtendedScreen(FluidPipeHandler::new, "pipe", "fluid_pipe");
 
         PacketUtils.registerC2SPacket(PipeModeC2SPacket.class, PipeModeC2SPacket::new);
         ConfigRegistry.registerServerConfig(PIPE_CONFIG);

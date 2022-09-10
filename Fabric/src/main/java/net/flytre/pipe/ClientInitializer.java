@@ -17,6 +17,6 @@ public class ClientInitializer implements ClientModInitializer {
         } else {
             ItemPipeRenderer.addValidityChecker(ClientPathValidityChecker.VANILLA);
         }
-        FluidPipeRenderer.addValidityChecker(FabricFluidPipeLogic.FABRIC_VALIDITY_CHECKER);
+        // FluidPipeRenderer.addValidityChecker(FabricFluidPipeLogic.FABRIC_VALIDITY_CHECKER);
     }
 }

@@ -20,11 +20,11 @@ public class PipeClientPlugin implements REIClientPlugin {
             int y = screen.getY();
             return List.of(new Rectangle(x, y, 176, 170), new Rectangle(x + 176, y, 20, 80));
         });
-        exclusionZones.register(FluidPipeScreen.class, screen ->
-        {
-            int x = screen.getX();
-            int y = screen.getY();
-            return List.of(new Rectangle(x, y, 176, 170), new Rectangle(x + 176, y, 20, 80));
-        });
+        // exclusionZones.register(FluidPipeScreen.class, screen ->
+        // {
+        //     int x = screen.getX();
+        //     int y = screen.getY();
+        //     return List.of(new Rectangle(x, y, 176, 170), new Rectangle(x + 176, y, 20, 80));
+        // });
     }
 }

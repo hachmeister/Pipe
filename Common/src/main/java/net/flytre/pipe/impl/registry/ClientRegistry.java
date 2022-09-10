@@ -14,10 +14,10 @@ public class ClientRegistry {
         RenderLayerRegistry.registerBlockLayer(RenderLayer.getTranslucent(), Registry.ITEM_PIPE);
         RenderLayerRegistry.registerBlockLayer(RenderLayer.getTranslucent(), Registry.FAST_PIPE);
         RenderLayerRegistry.registerBlockLayer(RenderLayer.getTranslucent(), Registry.LIGHTNING_PIPE);
-        RenderLayerRegistry.registerBlockLayer(RenderLayer.getTranslucent(), Registry.FLUID_PIPE);
+        // RenderLayerRegistry.registerBlockLayer(RenderLayer.getTranslucent(), Registry.FLUID_PIPE);
         LoaderAgnosticClientRegistry.register(() -> Registry.ITEM_PIPE_BLOCK_ENTITY.get(), ItemPipeRenderer::new);
         LoaderAgnosticClientRegistry.register(() -> Registry.ITEM_PIPE_SCREEN_HANDLER.get(), ItemPipeScreen::new);
-        LoaderAgnosticClientRegistry.register(() -> Registry.FLUID_PIPE_BLOCK_ENTITY.get(), FluidPipeRenderer::new);
-        LoaderAgnosticClientRegistry.register(() -> Registry.FLUID_PIPE_SCREEN_HANDLER.get(), FluidPipeScreen::new);
+        // LoaderAgnosticClientRegistry.register(() -> Registry.FLUID_PIPE_BLOCK_ENTITY.get(), FluidPipeRenderer::new);
+        // LoaderAgnosticClientRegistry.register(() -> Registry.FLUID_PIPE_SCREEN_HANDLER.get(), FluidPipeScreen::new);
     }
 }
