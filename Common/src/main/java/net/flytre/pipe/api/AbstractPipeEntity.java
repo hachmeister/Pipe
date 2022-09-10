@@ -169,11 +169,12 @@ public abstract class AbstractPipeEntity<C, F extends ResourceFilter<? super C>>
                         LinkedList<BlockPos> newPath = new LinkedList<>(path);
                         newPath.add(current);
 
-                        if (transferResult.servo()) {
-                            @SuppressWarnings("unchecked") AbstractPipeEntity<C, ?> newOriginEntity = (AbstractPipeEntity<C, ?>) originEntity.world.getBlockEntity(offset);
-                            assert newOriginEntity != null;
-                            queue.add(Either.right(newOriginEntity));
-                        } else if (transferResult.roundRobin() == null || transferResult.filter() == null) {
+                        // if (transferResult.servo()) {
+                        //     @SuppressWarnings("unchecked") AbstractPipeEntity<C, ?> newOriginEntity = (AbstractPipeEntity<C, ?>) originEntity.world.getBlockEntity(offset);
+                        //     assert newOriginEntity != null;
+                        //     queue.add(Either.right(newOriginEntity));
+                        // } else
+                        if (transferResult.roundRobin() == null || transferResult.filter() == null) {
                             queue.add(Either.left(new TempPipeData<>(new PipePath.Potential<>(offset, newPath, originEntity.getResourceHandler(), direction.getOpposite(), animate), () -> parent, transferResult.storage())));
                         } else {
                             queue.add(Either.left(new TempPipeData<>(new PipePath.Potential<>(offset, newPath, originEntity.getResourceHandler(), direction.getOpposite(), animate), () -> parent.addNonTerminal(() -> transferResult.filter().get(), transferResult.roundRobin()), transferResult.storage())));
