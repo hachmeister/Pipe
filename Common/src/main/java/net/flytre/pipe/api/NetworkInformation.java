@@ -88,4 +88,10 @@ class NetworkInformation<C> {
             return handler.getHashCode(resource);
         }
     }
+
+    public void clearTrackedPath() {
+        trackedPaths.clear();
+        inverseTrackedPaths.clear();
+    }
+
 }

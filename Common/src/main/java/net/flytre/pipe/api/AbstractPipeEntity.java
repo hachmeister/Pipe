@@ -589,7 +589,9 @@ public abstract class AbstractPipeEntity<C, F extends ResourceFilter<? super C>>
 
     private void readQueueFromTag(NbtCompound tag) {
         NbtList list = tag.getList("queue", 10);
-        resources = new HashSet<>();
+        resources.clear();
+        networkInformation.clearTrackedPath();
+
         for (int i = 0; i < list.size(); i++) {
             TimedPipePath<C> result = TimedPipePath.fromTag(list.getCompound(i), getResourceHandler());
             networkInformation.addTrackedPath(result);
